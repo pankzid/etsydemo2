@@ -1,6 +1,6 @@
-app_key: <%= ENV["DROPBOX_APP_KEY"] %>
+app_key: "3e5rr36wyuxma79"
 app_secret: <%= ENV["DROPBOX_APP_SECRET"] %>
-access_token: <%= ENV["DROPBOX_ACCESS_TOKEN"] %>
+access_token: "fnyeo33s1a3a74cq"
 access_token_secret: <%= ENV["DROPBOX_ACCESS_TOKEN_SECRET"] %>
-user_id: <%= ENV["DROPBOX_USER_ID"] %>
+user_id: "324226280"
 access_type: "app_folder"
