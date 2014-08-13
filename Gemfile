@@ -1,11 +1,10 @@
-# source 'https://rubygems.org'
+source 'https://rubygems.org'
 # ruby '2.0.0', group: :production
 ruby '1.9.3', group: :development
 group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
-
 
 gem 'bootstrap-sass'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
