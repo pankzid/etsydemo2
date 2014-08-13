@@ -3,9 +3,9 @@
     <% @listings.each do |listing| %>
     <div class="col-sm-3">
       <div class="thumbnail">
-        <%# if listing.image.exist? %>
-          <%= link_to (image_tag listing.image.try(:url)), listing %>
-        <%# end %>
+        <% if listing.image.exists? %>
+          <%= link_to (image_tag listing.image.url), listing %>
+        <% end %>
         <div class="caption">
           <h3><%= listing.name.titleize %></h3>
           <p><%= listing.description %></p>
