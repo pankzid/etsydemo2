@@ -1,5 +1,10 @@
 # source 'https://rubygems.org'
-ruby '1.9.3'
+# ruby '2.0.0', group: :production
+ruby '1.9.3', group: :development
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 
 gem 'bootstrap-sass'
@@ -47,3 +52,4 @@ group :development do
   gem 'sextant'
   gem "binding_of_caller"
 end
+

@@ -22,3 +22,7 @@ footer {
   color: red;
   border: 1px solid #E3E3E3;
 }
+
+.col-sm-3:nth-child(4n+1) {
+  clear: left;
+}

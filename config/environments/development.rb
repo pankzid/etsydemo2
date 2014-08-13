@@ -34,4 +34,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  #asr
+  # paperclip
+  Paperclip.options[:command_path] = 'E:\misc\progExtr\ImageMagick-6.8.9-5'
 end
