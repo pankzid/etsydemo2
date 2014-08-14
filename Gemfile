@@ -1,4 +1,4 @@
-# source 'https://rubygems.org'
+source 'https://rubygems.org'
 # ruby '2.0.0', group: :production
 ruby '1.9.3'
 
