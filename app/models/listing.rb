@@ -18,9 +18,11 @@ class Listing < ActiveRecord::Base
 
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
-  validates :name, :description, :price,
+  validates :name, :description, :price, :user_id,
             presence: true
   validates :price, numericality: { greater_than: 0 }
 
   scope :recent, ->{ order('created_at DESC') }
+
+  belongs_to :user
 end
