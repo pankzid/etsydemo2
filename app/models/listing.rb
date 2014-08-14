@@ -23,6 +23,7 @@ class Listing < ActiveRecord::Base
   validates :price, numericality: { greater_than: 0 }
 
   scope :recent, ->{ order('created_at DESC') }
+  scope :seller, ->(user){ where(user: user) }
 
   belongs_to :user
 end

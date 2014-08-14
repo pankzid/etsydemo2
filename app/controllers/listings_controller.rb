@@ -3,6 +3,10 @@ class ListingsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
   before_action :check_listing_owner, only: [:edit, :update, :destroy]
 
+  def seller
+    @listings = Listing.seller(current_user)
+  end
+
   # GET /listings
   # GET /listings.json
   def index
