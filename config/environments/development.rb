@@ -38,4 +38,7 @@ Rails.application.configure do
   #asr
   # paperclip
   Paperclip.options[:command_path] = 'E:\misc\progExtr\ImageMagick-6.8.9-5'
+  # devise
+  config.action_mailer.default_url_options = { :host => 'l.d' }
+
 end

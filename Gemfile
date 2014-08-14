@@ -1,6 +1,6 @@
-source 'https://rubygems.org'
+# source 'https://rubygems.org'
 # ruby '2.0.0', group: :production
-ruby '1.9.3', group: :development
+ruby '1.9.3'
 
 group :production do
   gem 'pg'
@@ -18,6 +18,7 @@ gem 'bootstrap-sass'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "paperclip-dropbox", ">= 1.1.7"
 gem 'figaro'
+gem 'devise'
 
 gem 'rails', '4.1.4'
 gem 'sass-rails'
