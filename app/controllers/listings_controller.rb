@@ -70,7 +70,11 @@ class ListingsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_listing
-      @listing = Listing.find(params[:id])
+      begin
+        @listing = Listing.find(params[:id])
+      rescue Exception => e
+        redirect_to root_path, alert: e.message
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

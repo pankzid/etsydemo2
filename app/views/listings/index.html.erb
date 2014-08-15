@@ -12,7 +12,7 @@
           <h3><%= listing.name.titleize %></h3>
           <p>Sold by <strong><%= listing.user.try(:name_title) %></strong></p>
           <h4><%= number_to_currency(listing.price) %></h4>
-          <% if listing_owner(listing.user) %>
+          <% if listing_owner?(listing.user) %>
             <p>
               <%= link_to 'Edit', edit_listing_path(listing), class: 'btn btn-link' %>
               <%= link_to 'Delete', listing, method: :delete, data: { confirm: 'Are you sure!' }, class: 'btn btn-link' %>

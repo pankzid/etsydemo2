@@ -7,7 +7,9 @@ class User < ActiveRecord::Base
   validates :name, presence: true,
                    length: { minimum: 4 }
 
-  has_many :listings
+  has_many :listings, :dependent => :destroy
+  has_many :sales, class_name: 'Order', foreign_key: :seller_id
+  has_many :purchases, class_name: 'Order', foreign_key: :buyer_id
 
   def name_title
     name.titleize

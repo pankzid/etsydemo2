@@ -1,0 +1,21 @@
+<h1 class="center">Purchases Page</h1>
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <th class="center">Image</th>
+    <th class="center">Name</th>
+    <th class="center">Seller</th>
+    <th class="center">Price</th>
+    <th class="center">Bought at</th>
+  </tr>
+  <% @orders.each do |order| %>
+    <tr>
+      <td><%= image_tag order.listing.image.url(:thumb) %></td>
+      <td><%= order.listing.name %></td>
+      <td><%= order.seller.name_title %></td>
+      <td><%= number_to_currency(order.listing.price) %></td>
+      <td><%= order.created_at.strftime('%b %d, %Y') %></td>
+    </tr>
+  <% end %>
+
+</table>

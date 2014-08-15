@@ -26,4 +26,5 @@ class Listing < ActiveRecord::Base
   scope :seller, ->(user){ where(user: user) }
 
   belongs_to :user
+  has_many :orders, dependent: :destroy
 end
