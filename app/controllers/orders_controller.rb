@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
   end
 
   def create
+    success = true
     @order = Order.new(order_params)
     @order.buyer_id = current_user.id
     @order.seller_id = @listing.user.id
@@ -33,11 +34,12 @@ class OrdersController < ApplicationController
     )
     flash[:notice] = "Thanks for ordering"
     rescue Stripe::CardError => e
+      success = false
       flash[:alert] = e.message
     end
 
     respond_to do |format|
-      if @order.save
+      if success && @order.save
         format.html { redirect_to root_path }
         format.json { render :show, status: :created, location: @order }
       else
