@@ -9,7 +9,7 @@
     <p><%= @listing.description %></p>
     <h3><%= number_to_currency(@listing.price) %></h3>
     <% unless listing_owner? @listing.user %>
-      <%= link_to 'Buy It Now', new_listing_order_path(@listing), class: 'btn btn-primary center' %>
+      <%= link_to 'Buy It Now', new_listing_order_path(@listing), class: 'btn btn-primary center', data: { no_turbolink: true } %>
     <% end %>
   </div>
 </div>
