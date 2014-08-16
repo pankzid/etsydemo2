@@ -19,6 +19,7 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "paperclip-dropbox", ">= 1.1.7"
 gem 'figaro'
 gem 'devise'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 gem 'rails', '4.1.4'
 gem 'sass-rails'

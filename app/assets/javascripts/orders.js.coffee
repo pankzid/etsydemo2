@@ -11,8 +11,9 @@ payment =
 
   stripeResponseHandler: (status, response)->
     if status == 200
-      $('#new_order').append('<input type="hidden" name="cardToken">').val(response.id)
+      $('#new_order').append($('<input type="hidden" name="cardToken">').val(response.id))
       $('#new_order')[0].submit()
+      # $('input[type="submit"]').attr('disabled', false)
     else
       $('#stripe_error').text(response.error.message).show()
       $('input[type="submit"]').attr('disabled', false)
